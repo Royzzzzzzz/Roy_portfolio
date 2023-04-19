@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Darkmode from './darkmode';
+import Image from 'next/image';
 
 export default function Header() {
     return (
