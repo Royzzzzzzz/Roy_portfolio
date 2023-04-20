@@ -23,7 +23,7 @@ export default function Projects({ projects }) {
 
 
 // 각 요청 때마다 호출
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const options = {
         method: 'POST',
@@ -55,6 +55,7 @@ export async function getServerSideProps() {
     console.log(`projectNames : ${projectNames}`);
 
     return {
-        props: { projects }, // will be passed to the page component as props
+        props: { projects },
+        revalidate: 1 // will be passed to the page component as props
     }
 }
