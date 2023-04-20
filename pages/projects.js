@@ -23,7 +23,7 @@ export default function Projects({ projects }) {
 
 
 // 각 요청 때마다 호출
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const options = {
         method: 'POST',
